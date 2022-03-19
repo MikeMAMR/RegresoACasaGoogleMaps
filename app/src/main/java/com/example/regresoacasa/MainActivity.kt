@@ -200,8 +200,8 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         val url = "https://maps.googleapis.com/maps/api/directions/json?origin="+latLngFrom.latitude+","+latLngFrom.longitude+"&destination="+latLngTo.latitude+","+latLngTo.longitude+"&key=AIzaSyDOLK58XMDBOYPKebL3fUcF6rPG-BQlWto"
         Log.d("url", latLngFrom.latitude.toString() +","+latLngFrom.longitude.toString());
         Log.d("url", latLngTo.latitude.toString() +","+latLngTo.longitude.toString());
-        addMarker(latLngFrom, "Ubicación actual")
-        addMarker(latLngTo, "Casa")
+        setMarkerTo(latLngTo)
+        setMarkerFrom(latLngFrom)
         clearArray()
         val requestMapRequest = JsonObjectRequest(
             url,
